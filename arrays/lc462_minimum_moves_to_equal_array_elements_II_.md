@@ -10,19 +10,18 @@ Given an integer array `nums` of size `n`, return the minimum number of moves re
   - `-10^9 <= nums[i] <= 10^9`
 
 - **Examples**:
+
   - **Example 1**:
+
     - Input: `nums = [1,2,3]`
     - Output: `2`
     - Explanation: Make all elements `2`:
-      - `|1-2| = 1` move
-      - `|2-2| = 0` moves
-      - `|3-2| = 1` move
-      - Total: `1 + 0 + 1 = 2`
+      - Only two moves are needed (remember each move increments or decrements one element):
+        - `[1,2,3]  =>  [2,2,3]  =>  [2,2,2]`
+
   - **Example 2**:
     - Input: `nums = [1,10,2,9]`
     - Output: `16`
-    - Explanation: Make all elements `6`:
-      - `|1-6| + |10-6| + |2-6| + |9-6| = 5 + 4 + 4 + 3 = 16`
 
 ## Mental Model
 
@@ -134,6 +133,7 @@ var minMoves2 = function (nums) {
 
 ### Why Median?
 
+- To find the minimum number of moves to make all elements in the array equal, where each move adds or subtracts 1, we use the median of the sorted array. The median is the middle value that balances distances to all numbers on the number line, minimizing the total sum of absolute differences. We sort the array, pick the lower median (for simplicity), and sum the absolute differences |num - median| for each element. This sum is the minimum number of moves needed to make all elements equal to the median.
 - The median minimizes `sum(|num - target|)` in a sorted array for any target value.
 - No divisibility constraint (unlike #2033), so the median is always valid.
 - For even-length arrays, the lower or upper median works (we use lower for simplicity).
