@@ -2,7 +2,11 @@
 
 ## Problem Statement
 
-Given a 2D integer grid of size `m x n` and an integer `x`, find the minimum number of operations to make all elements equal (a uni-value grid). In one operation, you can add or subtract `x` from any element. Return `-1` if it’s impossible.
+You are given a 2D integer grid of size `m x n` and an integer `x`. In one operation, you can add `x` to or subtract `x` from any element in the `grid`.
+
+A uni-value grid is a grid where all the elements of it are equal.
+
+Return the minimum number of operations to make the grid uni-value. If it is not possible, return `-1`.
 
 - **Constraints**:
 
