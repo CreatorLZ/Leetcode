@@ -2,7 +2,13 @@
 
 ## Problem Statement
 
-Given an integer array `height` of length `n`, where each element `height[i]` represents the height of a vertical line at position `i`, find two lines that form a container with the x-axis to hold the most water. Return the **maximum area** of water the container can store. The area is calculated as the distance between the lines (width) multiplied by the minimum height of the two lines.
+You are given an integer array` height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `ith` line are `(i, 0)` and `(i, height[i])`.
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+Notice that you may not slant the container.
 
 - **Constraints**:
 
