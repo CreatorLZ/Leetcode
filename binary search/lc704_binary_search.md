@@ -33,11 +33,11 @@ Given a **sorted** array of integers `nums` (in **ascending order**) and an inte
 
 ### Analogy
 
-Imagine you’re looking for a specific book (e.g., “Book 9”) on a shelf where books are arranged in ascending order by number (`-1, 0, 3, 5, 9, 12`). Your solution checks each book from left to right (like browsing a shelf sequentially). Binary search, however, uses the sorted order to jump to the middle book, decide if “Book 9” is left or right, and repeat, checking fewer books each time.
+Imagine you’re looking for a specific book (e.g., “Book 9”) on a shelf where books are arranged in ascending order by number (`-1, 0, 3, 5, 9, 12`). my solution checks each book from left to right (like browsing a shelf sequentially). Binary search, however, uses the sorted order to jump to the middle book, decide if “Book 9” is left or right, and repeat, checking fewer books each time.
 
 ---
 
-## Solution 1: Linear Search Using `indexOf` (Your Solution)
+## Solution 1: Linear Search Using `indexOf` (my Solution)
 
 My solution uses JavaScript’s `indexOf` method to find the target. Below is the corrected version of my code (fixing the syntax error with the `if` condition and adding the return for the not-found case . the original one actually worked ironically ! lmao heres it for fun and future investigation first):
 
@@ -191,7 +191,7 @@ var search = function (nums, target) {
 | **Performance Example**    | For `n = 10^4`, may check 10,000 elements.       | For `n = 10^4`, at most 14 steps.                      |
 | **Meets Problem Intent**   | No (expects binary search).                      | Yes (designed for sorted arrays).                      |
 
-- **Your Solution**: Great for simplicity and works for any array, but it’s slower because it doesn’t use the fact that `nums` is sorted. It’s like checking every book on the shelf, even though they’re in order.
+- **my Solution**: Great for simplicity and works for any array, but it’s slower because it doesn’t use the fact that `nums` is sorted. It’s like checking every book on the shelf, even though they’re in order.
 - **Binary Search**: More efficient by leveraging the sorted order, cutting the search space in half each time. It’s like jumping to the middle of the shelf and narrowing down the search.
 
 ---
@@ -210,14 +210,14 @@ var search = function (nums, target) {
 
 ## Debugging Tips
 
-- **For Your Solution**:
+- **For my Solution**:
 
   - **Check Edge Cases**:
     - `nums = [5], target = 5` → `0`
     - `nums = [5], target = 6` → `-1`
     - `nums = [1,2,3,4,5], target = 1` (first element)
     - `nums = [1,2,3,4,5], target = 5` (last element)
-  - **Ensure Return**: Your original code missed `return -1` for the not-found case, which is fixed above.
+  - **Ensure Return**: my original code missed `return -1` for the not-found case, which is fixed above.
 
 - **For Binary Search**:
   - **Log Progress**:
@@ -232,7 +232,7 @@ var search = function (nums, target) {
 
 ---
 
-## Connection to Your Learning Journey
+## Connection to my Learning Journey
 
 ## My solution for #704 shows i am thinking practically, using a built-in method (`indexOf`) to solve the problem quickly. The binary search solution aligns with the problem’s intent.
 
@@ -246,4 +246,4 @@ var search = function (nums, target) {
   - Optimal for #704 (`O(log n)`), using the sorted property to halve the search space each step.
   - More complex but significantly faster for large arrays.
   - Meets the problem’s expectation for learning binary search.
-- **Recommendation**: Use binary search for sorted arrays in problems like #704, especially with large inputs (up to 10^4). Your `indexOf` solution is a great starting point, and now you can add binary search to your toolkit!
+- **Recommendation**: Use binary search for sorted arrays in problems like #704, especially with large inputs (up to 10^4). my `indexOf` solution is a great starting point, and now i can add binary search to my toolkit!
